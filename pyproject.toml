@@ -1,0 +1,38 @@
+[project]
+name = "lit-embs"
+version = "0.1.0"
+description = "Compare documents under change of structure as 'literate embeddings'."
+readme = "README.md"
+authors = [
+    { name = "Louis Maddox", email = "louismmx@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.license]
+text = "MIT"
+
+[project.optional-dependencies]
+dev = [
+    "pdm-bump>=0.9.10",
+    "pdm>=2.22.3",
+    "pre-commit>=4.1.0",
+    "pytest>=8.3.4",
+]
+polars = [
+    "polars>=1.21.0",
+]
+polars-lts-cpu = [
+    "polars-lts-cpu>=1.21.0",
+]
+
+
+[project.scripts]
+literate-embs = "literate_embs:main"
+
+[build-system]
+build-backend = "pdm.backend"
+requires = [
+    "pdm-backend",
+]
+
